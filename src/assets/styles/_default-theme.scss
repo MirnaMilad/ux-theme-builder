@@ -1,16 +1,16 @@
 /* Default theme CSS variables to prevent FOUC */
 :root {
   /* Colors */
-  --color-primary: #6366f1;
-  --color-secondary: #8b5cf6;
+  --color-primary: #222831;
+  --color-secondary: #30475e;
   --color-success: #10b981;
   --color-warning: #f59e0b;
-  --color-danger: #ef4444;
-  --color-background: #ffffff;
-  --color-surface: #f8fafc;
-  --color-text: #1e293b;
+  --color-danger: #f05454;
+  --color-background: #f8f9fa;
+  --color-surface: #ffffff;
+  --color-text: #222831;
   --color-text-secondary: #64748b;
-  --color-border: #e2e8f0;
+  --color-border: #e5e7eb;
 
   /* Typography */
   --font-family: system-ui, -apple-system, sans-serif;
