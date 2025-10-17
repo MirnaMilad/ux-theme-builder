@@ -1,0 +1,120 @@
+<div class="builder">
+  <header class="builder__header">
+    <div class="builder__header-content">
+      <h1 class="builder__title">Theme Builder</h1>
+      <p class="builder__subtitle">Create and customize your design system</p>
+    </div>
+
+    <div class="builder__actions">
+      <button class="btn btn--secondary" (click)="resetTheme()">Reset</button>
+      <button class="btn btn--primary" (click)="saveTheme()">Save Theme</button>
+    </div>
+  </header>
+
+  <div class="builder__content">
+    <section class="builder__section">
+      <h2 class="builder__section-title">Theme Information</h2>
+      <div class="builder__name-input">
+        <label for="theme-name" class="builder__label">Theme Name</label>
+        <input
+          id="theme-name"
+          type="text"
+          class="builder__input"
+          [value]="currentTheme().name"
+          (input)="updateThemeName($any($event.target).value)"
+          placeholder="My Awesome Theme"
+        />
+      </div>
+    </section>
+
+    <!-- Color Tokens -->
+    <section class="builder__section">
+      <h2 class="builder__section-title">Colors</h2>
+      <div class="builder__form-grid">
+        @for (field of colorFields; track field.key) {
+          <app-form-field
+            [config]="field"
+            [value]="currentColors()[field.key]"
+            (valueChange)="updateToken('colors', field.key, $event)"
+          />
+        }
+      </div>
+    </section>
+
+    <!-- Typography Tokens -->
+    <section class="builder__section">
+      <h2 class="builder__section-title">Typography</h2>
+      <div class="builder__form-grid">
+        @for (field of typographyFields; track field.key) {
+          <app-form-field
+            [config]="field"
+            [value]="currentTypography()[field.key]"
+            (valueChange)="updateToken('typography', field.key, $event)"
+          />
+        }
+      </div>
+    </section>
+
+    <!-- Spacing Tokens -->
+    <section class="builder__section">
+      <h2 class="builder__section-title">Spacing</h2>
+      <div class="builder__form-grid">
+        @for (field of spacingFields; track field.key) {
+          <app-form-field
+            [config]="field"
+            [value]="currentSpacing()[field.key]"
+            (valueChange)="updateToken('spacing', field.key, $event)"
+          />
+        }
+      </div>
+    </section>
+
+    <!-- Radius Tokens -->
+    <section class="builder__section">
+      <h2 class="builder__section-title">Border Radius</h2>
+      <div class="builder__form-grid">
+        @for (field of radiusFields; track field.key) {
+          <app-form-field
+            [config]="field"
+            [value]="currentRadius()[field.key]"
+            (valueChange)="updateToken('radius', field.key, $event)"
+          />
+        }
+      </div>
+    </section>
+
+    <!-- Export Section -->
+    <section class="builder__section">
+      <h2 class="builder__section-title">Export</h2>
+      <div class="builder__export">
+        <p class="builder__export-text">Export your theme as JSON, CSS variables, or SCSS</p>
+        <div class="builder__export-buttons">
+          <button class="btn btn--outline" (click)="exportTheme(exportFormat.JSON)">Export JSON</button>
+          <button class="btn btn--outline" (click)="exportTheme(exportFormat.CSS)">Export CSS</button>
+          <button class="btn btn--outline" (click)="exportTheme(exportFormat.SCSS)">Export SCSS</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Saved Themes -->
+    @if (savedThemes().length > 0) {
+      <section class="builder__section">
+        <h2 class="builder__section-title">Saved Themes</h2>
+        <div class="saved-themes">
+          @for (theme of savedThemes(); track theme.id) {
+            <div class="saved-theme">
+              <div class="saved-theme__info">
+                <h3 class="saved-theme__name">{{ theme.name }}</h3>
+                <p class="saved-theme__date">Updated: {{ theme.updatedAt | date: 'short' }}</p>
+              </div>
+              <div class="saved-theme__actions">
+                <button class="btn btn--sm btn--primary" (click)="loadSavedTheme(theme.id)">Load</button>
+                <button class="btn btn--sm btn--danger" (click)="deleteSavedTheme(theme.id)">Delete</button>
+              </div>
+            </div>
+          }
+        </div>
+      </section>
+    }
+  </div>
+</div>

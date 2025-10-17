@@ -1,59 +1,68 @@
-# UxThemeBuilder
+# 🎨 UX Theme Builder
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.5.
+A powerful, enterprise-grade theme builder and design system generator built with **Angular 20**, leveraging signals, zoneless change detection, and modern web standards.
 
-## Development server
+## 🌟 Project Overview
 
-To start a local development server, run:
+**UX Theme Builder** is a senior-level Angular project that demonstrates advanced frontend architecture, reactive state management, and dynamic UI rendering. It allows users to create, customize, save, and export complete design systems without any external UI library dependencies.
 
-```bash
-ng serve
-```
+### Key Features
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- ✨ **Dynamic Token System** - Define colors, typography, spacing, and border radius
+- 🔄 **Live Preview** - See changes instantly across all components
+- 💾 **Persistent Storage** - Save and load multiple themes using localStorage
+- 📤 **Export Options** - Export themes as JSON, CSS, or SCSS
+- �� **Type-Safe** - Full TypeScript support with strict mode
+- 🚀 **Performance** - Zoneless change detection with Angular signals
+- 📱 **Responsive** - Mobile-friendly interface
 
-## Code scaffolding
+## 🛠️ Tech Stack
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+| Area                 | Technology                                |
+| -------------------- | ----------------------------------------- |
+| **Framework**        | Angular 20                                |
+| **State Management** | Angular Signals                           |
+| **Change Detection** | Zoneless (provideZonelessChangeDetection) |
+| **Styling**          | SCSS + CSS Custom Properties              |
+| **Storage**          | LocalStorage API                          |
+| **Build Tool**       | Angular CLI 20                            |
+| **TypeScript**       | v5.6+ (Strict Mode)                       |
 
-```bash
-ng generate component component-name
-```
+## 🚀 Getting Started
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Prerequisites
 
-```bash
-ng generate --help
-```
+- Node.js 18+ and npm
+- Angular CLI 20+
 
-## Building
+### Installation
 
-To build the project run:
+\`\`\`bash
 
-```bash
-ng build
-```
+# Install dependencies
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+npm install
 
-## Running unit tests
+# Start development server
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+npm start
+\`\`\`
 
-```bash
-ng test
-```
+The app will be available at \`http://localhost:4200\`
 
-## Running end-to-end tests
+## 📖 Usage Guide
 
-For end-to-end (e2e) testing, run:
+### Creating a Theme
 
-```bash
-ng e2e
-```
+1. Navigate to the **Builder** page
+2. Customize colors, typography, spacing, and border radius
+3. See live updates in the form preview
+4. Click **Save Theme** to persist your design
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+### Exporting Themes
 
-## Additional Resources
+Click any export button to download your theme as JSON, CSS, or SCSS.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 📄 License
+
+MIT License - see LICENSE file for details

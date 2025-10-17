@@ -1,0 +1,92 @@
+<div class="preview">
+  <header class="preview__header">
+    <h1 class="preview__title">Component Preview</h1>
+    <p class="preview__subtitle">See your theme in action across different components</p>
+  </header>
+
+  <div class="preview__content">
+    <section class="preview__section">
+      <app-typography-preview />
+    </section>
+
+    <section class="preview__section">
+      <app-button-preview />
+    </section>
+
+    <section class="preview__section">
+      <app-card-preview />
+    </section>
+
+    <section class="preview__section">
+      <app-input-preview />
+    </section>
+
+    <!-- Color Palette Display -->
+    <section class="preview__section">
+      <h3 class="preview__section-title">Color Palette</h3>
+      <div class="color-palette">
+        <div class="color-swatch" style="background: var(--color-primary)">
+          <span class="color-swatch__label">Primary</span>
+        </div>
+        <div class="color-swatch" style="background: var(--color-secondary)">
+          <span class="color-swatch__label">Secondary</span>
+        </div>
+        <div class="color-swatch" style="background: var(--color-success)">
+          <span class="color-swatch__label">Success</span>
+        </div>
+        <div class="color-swatch" style="background: var(--color-warning)">
+          <span class="color-swatch__label">Warning</span>
+        </div>
+        <div class="color-swatch" style="background: var(--color-danger)">
+          <span class="color-swatch__label">Danger</span>
+        </div>
+        <div class="color-swatch" style="background: var(--color-surface); border: 1px solid var(--color-border)">
+          <span class="color-swatch__label color-swatch__label--dark">Surface</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Spacing Scale -->
+    <section class="preview__section">
+      <h3 class="preview__section-title">Spacing Scale</h3>
+      <div class="spacing-demo">
+        <div class="spacing-item">
+          <div class="spacing-box" style="width: var(--spacing-xs)"></div>
+          <span class="spacing-label">XS</span>
+        </div>
+        <div class="spacing-item">
+          <div class="spacing-box" style="width: var(--spacing-sm)"></div>
+          <span class="spacing-label">SM</span>
+        </div>
+        <div class="spacing-item">
+          <div class="spacing-box" style="width: var(--spacing-md)"></div>
+          <span class="spacing-label">MD</span>
+        </div>
+        <div class="spacing-item">
+          <div class="spacing-box" style="width: var(--spacing-lg)"></div>
+          <span class="spacing-label">LG</span>
+        </div>
+        <div class="spacing-item">
+          <div class="spacing-box" style="width: var(--spacing-xl)"></div>
+          <span class="spacing-label">XL</span>
+        </div>
+        <div class="spacing-item">
+          <div class="spacing-box" style="width: var(--spacing-2xl)"></div>
+          <span class="spacing-label">2XL</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Border Radius -->
+    <section class="preview__section">
+      <h3 class="preview__section-title">Border Radius</h3>
+      <div class="radius-demo">
+        <div class="radius-box" style="border-radius: var(--radius-sm)">SM</div>
+        <div class="radius-box" style="border-radius: var(--radius-md)">MD</div>
+        <div class="radius-box" style="border-radius: var(--radius-lg)">LG</div>
+        <div class="radius-box" style="border-radius: var(--radius-xl)">XL</div>
+        <div class="radius-box" style="border-radius: var(--radius-full)">Full</div>
+      </div>
+    </section>
+  </div>
+</div>

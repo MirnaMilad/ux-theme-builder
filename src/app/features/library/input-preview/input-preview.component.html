@@ -1,0 +1,100 @@
+<div class="input-preview">
+  <h3 class="input-preview__title">Form Inputs</h3>
+
+  <div class="input-preview__grid">
+    <div class="form-group">
+      <label for="text-input" class="form-group__label">Text Input</label>
+      <input
+        id="text-input"
+        type="text"
+        class="form-group__input"
+        placeholder="Enter your name"
+        [(ngModel)]="textValue"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="email-input" class="form-group__label">Email Input</label>
+      <input
+        id="email-input"
+        type="email"
+        class="form-group__input"
+        placeholder="email@example.com"
+        [(ngModel)]="emailValue"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="password-input" class="form-group__label">Password Input</label>
+      <input
+        id="password-input"
+        type="password"
+        class="form-group__input"
+        placeholder="••••••••"
+        [(ngModel)]="passwordValue"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="select-input" class="form-group__label">Select Input</label>
+      <select id="select-input" class="form-group__input" [(ngModel)]="selectValue">
+        <option value="">Choose an option</option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="textarea-input" class="form-group__label">Textarea</label>
+      <textarea
+        id="textarea-input"
+        class="form-group__input form-group__input--textarea"
+        placeholder="Enter your message"
+        rows="3"
+        [(ngModel)]="textareaValue"
+      ></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="search-input" class="form-group__label">Search Input</label>
+      <div class="form-group__search">
+        <input
+          id="search-input"
+          type="search"
+          class="form-group__input"
+          placeholder="Search..."
+          [(ngModel)]="searchValue"
+        />
+        <span class="form-group__icon">🔍</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="input-preview__checks">
+    <label class="checkbox">
+      <input type="checkbox" class="checkbox__input" [(ngModel)]="checkbox1" />
+      <span class="checkbox__label">Accept terms and conditions</span>
+    </label>
+
+    <label class="checkbox">
+      <input type="checkbox" class="checkbox__input" [(ngModel)]="checkbox2" />
+      <span class="checkbox__label">Subscribe to newsletter</span>
+    </label>
+
+    <div class="radio-group">
+      <label class="radio">
+        <input type="radio" name="radio-demo" class="radio__input" [(ngModel)]="radioValue" value="1" />
+        <span class="radio__label">Option A</span>
+      </label>
+      <label class="radio">
+        <input type="radio" name="radio-demo" class="radio__input" [(ngModel)]="radioValue" value="2" />
+        <span class="radio__label">Option B</span>
+      </label>
+      <label class="radio">
+        <input type="radio" name="radio-demo" class="radio__input" [(ngModel)]="radioValue" value="3" />
+        <span class="radio__label">Option C</span>
+      </label>
+    </div>
+  </div>
+</div>

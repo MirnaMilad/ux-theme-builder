@@ -1,0 +1,65 @@
+<div class="form-field">
+  <label [for]="config().key" class="form-field__label">
+    {{ config().label }}
+    @if (config().description) {
+      <span class="form-field__description">{{ config().description }}</span>
+    }
+  </label>
+
+  @switch (config().type) {
+    @case ('color') {
+      <div class="form-field__color-input">
+        <input
+          [id]="config().key"
+          type="color"
+          class="form-field__input form-field__input--color"
+          [value]="value()"
+          (input)="onValueChange($any($event.target).value)"
+        />
+        <input
+          type="text"
+          class="form-field__input form-field__input--text"
+          [value]="value()"
+          (input)="onValueChange($any($event.target).value)"
+          [placeholder]="config().placeholder || '#000000'"
+          maxlength="7"
+        />
+      </div>
+    }
+    @case ('number') {
+      <input
+        [id]="config().key"
+        type="number"
+        class="form-field__input"
+        [value]="value()"
+        (input)="onValueChange($any($event.target).value)"
+        [placeholder]="config().placeholder"
+        [min]="config().min"
+        [max]="config().max"
+        [step]="config().step"
+      />
+    }
+    @case ('select') {
+      <select
+        [id]="config().key"
+        class="form-field__input"
+        [value]="value()"
+        (change)="onValueChange($any($event.target).value)"
+      >
+        @for (option of config().options; track option.value) {
+          <option [value]="option.value">{{ option.label }}</option>
+        }
+      </select>
+    }
+    @default {
+      <input
+        [id]="config().key"
+        type="text"
+        class="form-field__input"
+        [value]="value()"
+        (input)="onValueChange($any($event.target).value)"
+        [placeholder]="config().placeholder"
+      />
+    }
+  }
+</div>
