@@ -2,6 +2,10 @@
 
 A powerful, enterprise-grade theme builder and design system generator built with **Angular 20**, leveraging signals, zoneless change detection, and modern web standards.
 
+## 🔗 Live Demo
+
+**[View Live Demo](https://mirnamimilad.github.io/ux-theme-builder/)** 🚀
+
 ## 🌟 Project Overview
 
 **UX Theme Builder** is a senior-level Angular project that demonstrates advanced frontend architecture, reactive state management, and dynamic UI rendering. It allows users to create, customize, save, and export complete design systems without any external UI library dependencies.
@@ -50,7 +54,25 @@ npm start
 
 The app will be available at \`http://localhost:4200\`
 
-## 📖 Usage Guide
+## � Deployment
+
+### Deploy to GitHub Pages
+
+\`\`\`bash
+
+# Build and deploy to GitHub Pages
+
+npm run deploy
+\`\`\`
+
+This will:
+
+1. Build the project in production mode
+2. Configure the base href for GitHub Pages
+3. Deploy to the \`gh-pages\` branch
+4. Your site will be live at \`https://<username>.github.io/ux-theme-builder/\`
+
+## �📖 Usage Guide
 
 ### Creating a Theme
 
