@@ -8,7 +8,7 @@ A powerful, enterprise-grade theme builder and design system generator built wit
 
 ## 🌟 Project Overview
 
-**UX Theme Builder** is a senior-level Angular project that demonstrates advanced frontend architecture, reactive state management, and dynamic UI rendering. It allows users to create, customize, save, and export complete design systems without any external UI library dependencies.
+**UX Theme Builder** is an Angular project that demonstrates advanced frontend architecture, reactive state management, and dynamic UI rendering. It allows users to create, customize, save, and export complete design systems without any external UI library dependencies.
 
 ### Key Features
 
