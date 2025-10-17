@@ -54,9 +54,23 @@ npm start
 
 The app will be available at \`http://localhost:4200\`
 
-## � Deployment
+## 🚀 Deployment
 
-### Deploy to GitHub Pages
+### Automatic Deployment (Recommended)
+
+The project automatically deploys to GitHub Pages when you push changes to the `main` branch using GitHub Actions.
+
+**Workflow:**
+
+1. Push your changes to `main`
+2. GitHub Actions automatically runs tests
+3. If tests pass, builds the project
+4. Deploys to GitHub Pages
+5. Live site updates at `https://mirnamimilad.github.io/ux-theme-builder/`
+
+### Manual Deployment
+
+You can also manually deploy using:
 
 \`\`\`bash
 
@@ -70,9 +84,8 @@ This will:
 1. Build the project in production mode
 2. Configure the base href for GitHub Pages
 3. Deploy to the \`gh-pages\` branch
-4. Your site will be live at \`https://<username>.github.io/ux-theme-builder/\`
 
-## �📖 Usage Guide
+## 📖 Usage Guide
 
 ### Creating a Theme
 
