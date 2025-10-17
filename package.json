@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build:prod": "ng build --configuration production --base-href /ux-theme-builder/ && node copy-index-to-404.js",
-    "deploy": "npm run build:prod && npx angular-cli-ghpages --dir=dist/ux-theme-builder/browser --no-silent",
+    "deploy": "npm run build:prod && npx gh-pages -d dist/ux-theme-builder/browser -t true",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "test:ci": "ng test --no-watch --no-progress --browsers=ChromeHeadless",
