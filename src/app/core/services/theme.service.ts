@@ -27,6 +27,11 @@ export class ThemeService {
   readonly radius$: Signal<Record<string, string>> = computed(() => this.themeSignal().radius);
 
   constructor() {
+    // Apply initial theme immediately (synchronously) to prevent FOUC
+    if (this.isBrowser) {
+      this.applyCSSVariables(this.theme$());
+    }
+
     // Automatically apply theme changes to CSS variables (browser only)
     effect(() => {
       if (this.isBrowser) {
