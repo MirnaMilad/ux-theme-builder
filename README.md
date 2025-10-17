@@ -4,7 +4,7 @@ A powerful, enterprise-grade theme builder and design system generator built wit
 
 ## 🔗 Live Demo
 
-**[View Live Demo](https://mirnamimilad.github.io/ux-theme-builder/)** 🚀
+**[View Live Demo](https://mirnamilad.github.io/ux-theme-builder/builder)** 🚀
 
 ## 🌟 Project Overview
 
