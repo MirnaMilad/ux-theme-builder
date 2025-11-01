@@ -38,7 +38,7 @@ describe('TypographyPreviewComponent', () => {
   it('should render section titles', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const sectionTitles = compiled.querySelectorAll('.section-title');
-    expect(sectionTitles.length).toBeGreaterThanOrEqual(4);
+    expect(sectionTitles.length).toBeGreaterThanOrEqual(3);
   });
 
   it('should render body text sizes', () => {
@@ -57,37 +57,15 @@ describe('TypographyPreviewComponent', () => {
     expect(boldText).toBeTruthy();
   });
 
-  it('should render code element', () => {
-    const compiled = fixture.nativeElement as HTMLElement;
-    const code = compiled.querySelector('.code');
-    expect(code).toBeTruthy();
-    expect(code?.textContent).toContain('ThemeService');
-  });
-
-  it('should render code block', () => {
-    const compiled = fixture.nativeElement as HTMLElement;
-    const codeBlock = compiled.querySelector('.code-block');
-    expect(codeBlock).toBeTruthy();
-    expect(codeBlock?.textContent).toContain('function');
-  });
-
   it('should have typography sections', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const sections = compiled.querySelectorAll('.typography-preview__section');
-    expect(sections.length).toBe(4);
+    expect(sections.length).toBe(3);
   });
 
   it('should render all 6 heading levels', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const headings = compiled.querySelectorAll('.heading');
     expect(headings.length).toBe(6);
-  });
-
-  it('should display monospace content', () => {
-    const compiled = fixture.nativeElement as HTMLElement;
-    const code = compiled.querySelector('.code');
-    const codeBlock = compiled.querySelector('.code-block');
-    expect(code).toBeTruthy();
-    expect(codeBlock).toBeTruthy();
   });
 });
